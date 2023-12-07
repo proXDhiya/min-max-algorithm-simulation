@@ -3,5 +3,9 @@
 # min-max-algorithm-simulation
 hello world
 
+![Figure 1](/.eraser/irD8ODGls0S6bNzXfYzB___wdKsQ1Gs1tauG9jY5rXT5kRiFG73___---figure---jd0y1BWXD9de72NytyfEY---figure---lk4vXzqq28IQtnnMY8MHJA.png "Figure 1")
+
+
+
 
 <!--- Eraser file: https://app.eraser.io/workspace/irD8ODGls0S6bNzXfYzB --->
