@@ -11,17 +11,17 @@
 
 ## Table of Contents
 1. **Introduction**
-    - 1.1 Purpose
-    - 1.2 Background
-    - 1.3 Terminology
+    - [1.1 Purpose](#11-purpose)
+    - [1.2 Background](#12-background)
+    - [1.3 Terminology](#13-terminology)
 2. **Algorithm Overview**
-    - 2.1 Basic Idea
-    - 2.2 Objective Function
-    - 2.3 Turn-Taking
+    - [2.1 Basic Idea](#21-basic-idea)
+    - [2.2 Objective Function](#22-objective-function)
+    - [2.3 Turn-Taking](#23-turn-taking)
 3. **Pseudocode**
-    - 3.1 Initialization
-    - 3.2 Recursion
-    - 3.3 Evaluation Function
+    - [3.1 Initialization](#31-initialization)
+    - [3.2 Recursion](#32-recursion)
+    - [3.3 Evaluation Function](#33-evaluation-function)
 4. **Implementation Details**
     - 4.1 Data Structures
     - 4.2 Game State Representation
@@ -150,6 +150,7 @@ Integrate the Min-Max algorithm into the game loop, allowing it to make optimal 
 
 ### 5.2 Setting Evaluation Functions
 Adjust the evaluation function to reflect the specific requirements and characteristics of the game.
+
 
 ## 6. Optimizations
 ### 6.1 Alpha-Beta Pruning
