@@ -22,7 +22,6 @@
     - 3.1 Initialization
     - 3.2 Recursion
     - 3.3 Evaluation Function
-    - 3.4 Terminal Test
 4. **Implementation Details**
     - 4.1 Data Structures
     - 4.2 Game State Representation
@@ -95,38 +94,40 @@ In summary, the Min-Max algorithm's basic idea involves exploring the game tree,
 
 ## 3. Pseudocode
 ### 3.1 Initialization
-```plaintext
-plaintextCopy codefunction minimax(node, depth, maximizingPlayer):
-if depth is 0 or node is a terminal node:
-    return evaluate(node)
+The Min-Max algorithm begins by initializing the game tree with the current game state. The algorithm then proceeds to explore the tree, assigning values to nodes and ultimately determining the best move for the player.
 
-if maximizingPlayer:
-    value = -∞
-    for child in node.children:
-        value = max(value, minimax(child, depth - 1, False))
-    return value
-else:
-    value = +∞
-    for child in node.children:
-        value = min(value, minimax(child, depth - 1, True))
-    return value
 ```
+function MinMax(node, depth, maximizingPlayer)
+    if depth = 0 or node is a terminal node
+        return the heuristic value of node
+    if maximizingPlayer
+        bestValue := -∞
+        for each child of node
+            val := MinMax(child, depth - 1, FALSE)
+            bestValue := max(bestValue, val)
+        return bestValue
+    else
+        bestValue := +∞
+        for each child of node
+            val := MinMax(child, depth - 1, TRUE)
+            bestValue := min(bestValue, val)
+        return bestValue
+```
+
 ### 3.2 Recursion
-The algorithm recursively explores the game tree, considering all possible moves.
+The Min-Max algorithm utilizes recursion to explore the game tree. The algorithm starts at the root node, representing the current game state, and proceeds to explore the tree by considering all possible moves. The algorithm alternates between maximizing and minimizing nodes, assigning values to each node based on the objective function.
 
 ### 3.3 Evaluation Function
-```plaintext
-plaintextCopy codefunction evaluate(node):
-// Implement a heuristic evaluation function
-// to assess the desirability of the game state.
-// Return a numerical value representing the state's quality.
+The evaluation function is a crucial component of the Min-Max algorithm. It serves as a metric for quantifying the desirability of a particular game state from the perspective of the player. The evaluation function typically considers factors such as the current position of pieces, control of the board, potential threats, and other relevant aspects of the game.
+
 ```
-### 3.4 Terminal Test
-```plaintext
-plaintextCopy codefunction isTerminal(node):
-// Check if the current node is a terminal state.
-// Return true if the game is over; otherwise, false.
+function evaluate(board)
+    if board is a terminal node
+        return value of board
+    else
+        return heuristic value of board
 ```
+
 ## 4. Implementation Details
 ### 4.1 Data Structures
 Use appropriate data structures to represent the game state, moves, and the game tree.
