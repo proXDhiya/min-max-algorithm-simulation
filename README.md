@@ -169,5 +169,39 @@ Alpha-Beta Pruning is a technique used to optimize the Min-Max algorithm by redu
 
 The implementation of Alpha-Beta Pruning is an enhancement to the basic Min-Max algorithm and significantly improves its efficiency, especially in scenarios with a large decision tree.
 
+## 5. Mini-Project: Tic-Tac-Toe with Min-Max Algorithm
+### 5.1 Overview
+Provide a brief overview of your mini-project, explaining the purpose and functionality of the application. Outline the main components, such as the backend built with Node.js and Express.js, the API for receiving game state, and the client application for user interaction.
 
-![Alt image1](./images/image1.png)
+### 5.2 Backend Implementation
+#### 5.2.1 Node.js and Express.js
+Detail the use of Node.js and Express.js in building the backend of your application. Discuss how these technologies are employed to create a robust and responsive API for handling tic-tac-toe game states.
+
+#### 5.2.2 API Endpoints
+Outline the API endpoints you've created to facilitate communication between the client and the Min-Max algorithm. Specify how the API receives the current game board status and the next player, returning the optimal move.
+
+### 5.3 Min-Max Algorithm Integration
+Explain how you integrated the Min-Max algorithm into your backend. Discuss any modifications or optimizations made to tailor the algorithm for tic-tac-toe, including how the game state is represented and how moves are generated.
+
+### 5.4 Client Application
+#### 5.4.1 HTML, CSS, and JavaScript
+Describe the frontend implementation using HTML for structure, CSS for styling, and JavaScript for interactivity. Explain how users interact with the tic-tac-toe game board and make moves.
+
+#### 5.4.2 User Experience
+Discuss the user experience provided by the client application. Detail how users can play against the Min-Max algorithm, understand the feedback provided by the application, and witness the algorithm's moves.
+
+### 5.5 Communication Between Client and Backend
+Explain the communication flow between the client and the backend. Detail how the client sends the current game state and player information to the backend API and how it receives the optimal move in return.
+
+### 5.6 Showcase and Results
+Include visual representations of your mini-project, such as screenshots or snippets of code. Highlight the results achieved by playing against the Min-Max algorithm, showcasing how it optimally responds to user moves.
+
+### 5.7 Challenges and Solutions
+Discuss any challenges encountered during the development of your mini-project and the solutions implemented. This could include handling asynchronous communication, optimizing the algorithm's efficiency, or addressing user interface concerns.
+
+### 5.8 Future Enhancements
+Conclude the discussion with potential future enhancements for your mini-project. Consider aspects such as adding additional features, improving the user interface, or extending the algorithm for more complex games.
+
+This comprehensive discussion of your mini-project will provide readers with a clear understanding of the architecture, functionality, and outcomes of your application involving the Min-Max algorithm.
+
+![Alt image1](https://github.com/proXDhiya/min-max-algorithm-simulation/blob/main/images/image1.png?raw=true)
