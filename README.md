@@ -218,3 +218,27 @@ function minimax(node, depth, maximizingPlayer) {
 - **Move Generation:** Move generation involves checking the legal moves for each empty square on the board.
 
 - **Alpha-Beta Pruning:** The implementation of Alpha-Beta Pruning significantly improves the efficiency of the Min-Max algorithm, especially in scenarios with a large decision tree.
+
+- **Evaluation Function:** The evaluation function considers factors such as the current position of pieces, control of the board, potential threats, and other relevant aspects of the game.
+
+- **Turn-Taking:** The algorithm alternates between maximizing and minimizing nodes, assigning values to each node based on the objective function.
+
+- **Terminal State:** The algorithm determines the terminal state by checking for win/loss conditions or draws.
+
+- **Optimal Move:** The algorithm determines the optimal move by evaluating all possible moves and their outcomes, ultimately choosing the move associated with the most favorable outcome.
+
+## 6. Application Demo
+### 6.1 API
+
+<img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image2.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
+<p style="text-align: center"> Figure-2: API endpoints</p>
+
+### 6.2 Client Application
+
+<img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image3.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
+
+<p style="text-align: center"> Figure-3: Client application</p>
+
+<img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image4.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
+
+<p style="text-align: center"> Figure-4: Client application</p>
