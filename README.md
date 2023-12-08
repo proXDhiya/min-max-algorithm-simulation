@@ -179,7 +179,7 @@ The implementation of Alpha-Beta Pruning is an enhancement to the basic Min-Max 
 ### 5.1 Overview
 The purpose of this mini-project is to create an interactive Tic-Tac-Toe game where users can play against an AI opponent powered by the Min-Max algorithm. The application consists of a backend built with Node.js and Express.js, featuring an API that receives the current state of the Tic-Tac-Toe game board and the next player's symbol (X or O). The backend employs the Min-Max algorithm to determine the optimal move for the AI opponent and returns the updated game state to the client.
 
-<img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image1.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
+<img src="https://github.com/proXDhiya/min-max-algorithm-simulation/blob/main/images/image1.png?raw=true" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
 
 <p style="text-align: center"> Figure-1: Project architecture</p>
 
@@ -235,18 +235,18 @@ function minimax(node, depth, maximizingPlayer) {
 ## 6. Application Demo
 ### 6.1 API
 
-<img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image2.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
+<img src="https://github.com/proXDhiya/min-max-algorithm-simulation/blob/main/images/image2.png?raw=true" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
 <p style="text-align: center"> Figure-2: API endpoints</p>
 
 ### 6.2 Client Application
 
-<img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image3.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
+<img src="https://github.com/proXDhiya/min-max-algorithm-simulation/blob/main/images/image3.png?raw=true" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
 
-<p style="text-align: center"> Figure-3: Client application</p>
+<p style="text-align: center"> Figure-3: Client application UI</p>
 
-<img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image4.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
+<img src="https://github.com/proXDhiya/min-max-algorithm-simulation/blob/main/images/image4.png?raw=true" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
 
-<p style="text-align: center"> Figure-4: Client application</p>
+<p style="text-align: center"> Figure-4: Client application UI</p>
 
 ## 7. Conclusion
 The Min-Max algorithm is a decision-making tool that helps players make optimal decisions in turn-based games with perfect information. The algorithm explores the decision space represented by the game tree, assigning values to nodes based on an objective function. The algorithm's recursive nature allows it to consider all possible moves and their outcomes, ultimately leading to optimal decision-making in turn-based games with perfect information.
