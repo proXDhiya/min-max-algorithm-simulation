@@ -27,7 +27,13 @@
     - [4.2 Game State Representation](#42-game-state-representation)
     - [4.3 Move Generation](#43-move-generation)
     - [4.4 Min-Max Implementation](#44-min-max-implementation)
----
+    - [4.5 Alpha-Beta Pruning](#45-alpha-beta-pruning)
+5. **Mini-Project: Tic-Tac-Toe with Min-Max Algorithm**
+    - [5.1 Overview](#51-overview)
+    - [5.2 API for Game State Handling](#52-api-for-game-state-handling)
+    - [5.3 Client Application](#53-client-application)
+    - [5.4 Algorithm JS Code](#54-algorithm-js-code)
+    - [5.5 Algorithm Implementation](#55-algorithm-implementation)
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -46,8 +52,6 @@ In turn-based games, players take sequential turns, and each player aims to maxi
 - **Depth:** Refers to the level of recursion in the game tree. As the Min-Max algorithm explores the decision tree, it goes deeper into levels of possible moves. The depth influences the algorithm's ability to consider long-term strategies and the computational complexity of the problem.
 - **Terminal State:** Represents the end state of the game, where no more moves are possible. Terminal states are crucial for determining the outcome and are typically associated with win/loss conditions or draws.
 Understanding these terms is essential for grasping the dynamics of the Min-Max algorithm. The maximizer and minimizer players alternate turns, and the algorithm's recursive nature allows it to explore the decision space efficiently, ultimately leading to optimal decision-making in turn-based games with perfect information.
-
----
 
 ## 2. Algorithm Overview
 ### 2.1 Basic Idea
@@ -73,13 +77,11 @@ This turn-taking mechanism continues until a terminal state is reached, signalin
 
 In summary, the Min-Max algorithm's basic idea involves exploring the game tree, utilizing an objective function to evaluate nodes, and incorporating turn-taking to guide decision-making in turn-based games with perfect information.
 
----
-
 ## 3. Pseudocode
 ### 3.1 Initialization
 The Min-Max algorithm begins by initializing the game tree with the current game state. The algorithm then proceeds to explore the tree, assigning values to nodes and ultimately determining the best move for the player.
 
-```
+```python
 function MinMax(node, depth, maximizingPlayer)
     if depth = 0 or node is a terminal node
         return the heuristic value of node
@@ -103,12 +105,11 @@ The Min-Max algorithm utilizes recursion to explore the game tree. The algorithm
 ### 3.3 Evaluation Function
 The evaluation function is a crucial component of the Min-Max algorithm. It serves as a metric for quantifying the desirability of a particular game state from the perspective of the player. The evaluation function typically considers factors such as the current position of pieces, control of the board, potential threats, and other relevant aspects of the game.
 
-```
+```python
 function evaluate(board)
     if board is a terminal node
         return value of board
-    else
-        return heuristic value of board
+    else return heuristic value of board
 ```
 
 ## 4. Implementation Details
@@ -171,37 +172,49 @@ The implementation of Alpha-Beta Pruning is an enhancement to the basic Min-Max 
 
 ## 5. Mini-Project: Tic-Tac-Toe with Min-Max Algorithm
 ### 5.1 Overview
-Provide a brief overview of your mini-project, explaining the purpose and functionality of the application. Outline the main components, such as the backend built with Node.js and Express.js, the API for receiving game state, and the client application for user interaction.
+The purpose of this mini-project is to create an interactive Tic-Tac-Toe game where users can play against an AI opponent powered by the Min-Max algorithm. The application consists of a backend built with Node.js and Express.js, featuring an API that receives the current state of the Tic-Tac-Toe game board and the next player's symbol (X or O). The backend employs the Min-Max algorithm to determine the optimal move for the AI opponent and returns the updated game state to the client.
 
-### 5.2 Backend Implementation
-#### 5.2.1 Node.js and Express.js
-Detail the use of Node.js and Express.js in building the backend of your application. Discuss how these technologies are employed to create a robust and responsive API for handling tic-tac-toe game states.
+<img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image1.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
 
-#### 5.2.2 API Endpoints
-Outline the API endpoints you've created to facilitate communication between the client and the Min-Max algorithm. Specify how the API receives the current game board status and the next player, returning the optimal move.
+<p style="text-align: center"> Figure-1: Project architecture</p>
 
-### 5.3 Min-Max Algorithm Integration
-Explain how you integrated the Min-Max algorithm into your backend. Discuss any modifications or optimizations made to tailor the algorithm for tic-tac-toe, including how the game state is represented and how moves are generated.
 
-### 5.4 Client Application
-#### 5.4.1 HTML, CSS, and JavaScript
-Describe the frontend implementation using HTML for structure, CSS for styling, and JavaScript for interactivity. Explain how users interact with the tic-tac-toe game board and make moves.
+### 5.2 API for Game State Handling:
+- **API Endpoints:** The backend features API endpoints responsible for receiving incoming requests from the client. These endpoints handle information about the current state of the Tic-Tac-Toe game board and the next player.
 
-#### 5.4.2 User Experience
-Discuss the user experience provided by the client application. Detail how users can play against the Min-Max algorithm, understand the feedback provided by the application, and witness the algorithm's moves.
+- **Min-Max Algorithm Integration:** The API integrates the Min-Max algorithm to calculate the optimal move for the AI opponent based on the received game state. This ensures the AI makes strategic decisions to challenge the player.
 
-### 5.5 Communication Between Client and Backend
-Explain the communication flow between the client and the backend. Detail how the client sends the current game state and player information to the backend API and how it receives the optimal move in return.
+### 5.3 Client Application:
+- **User Interface:** The client application features a user interface that allows users to play Tic-Tac-Toe against an AI opponent. The interface displays the current state of the game board and the next player's symbol (X or O).
 
-### 5.6 Showcase and Results
-Include visual representations of your mini-project, such as screenshots or snippets of code. Highlight the results achieved by playing against the Min-Max algorithm, showcasing how it optimally responds to user moves.
+- **Communication with Backend:** The client application communicates with the backend through API calls, sending information about the current game state (array of symbols) and the next player's symbol (X or O). The backend responds with the updated game state and timestamp.
 
-### 5.7 Challenges and Solutions
-Discuss any challenges encountered during the development of your mini-project and the solutions implemented. This could include handling asynchronous communication, optimizing the algorithm's efficiency, or addressing user interface concerns.
+### 5.4 Algorithm JS Code:
+```js
+function minimax(node, depth, maximizingPlayer) {
+    if (depth == 0 || isTerminal(node)) {
+        return evaluate(node);
+    }
 
-### 5.8 Future Enhancements
-Conclude the discussion with potential future enhancements for your mini-project. Consider aspects such as adding additional features, improving the user interface, or extending the algorithm for more complex games.
+    if (maximizingPlayer) {
+        let value = -Infinity;
+        for (let child of node.children) {
+            value = Math.max(value, minimax(child, depth - 1, false));
+        }
+        return value;
+    } else {
+        let value = Infinity;
+        for (let child of node.children) {
+            value = Math.min(value, minimax(child, depth - 1, true));
+        }
+        return value;
+    }
+}
+```
 
-This comprehensive discussion of your mini-project will provide readers with a clear understanding of the architecture, functionality, and outcomes of your application involving the Min-Max algorithm.
+### 5.5 Algorithm Implementation:
+- **Game State Representation:** The game state is represented as a 2D array, where each element corresponds to a square on the Tic-Tac-Toe board. The elements contain information about whether they're empty or occupied by a player's mark.
 
-![Alt image1](https://github.com/proXDhiya/min-max-algorithm-simulation/blob/main/images/image1.png?raw=true)
+- **Move Generation:** Move generation involves checking the legal moves for each empty square on the board.
+
+- **Alpha-Beta Pruning:** The implementation of Alpha-Beta Pruning significantly improves the efficiency of the Min-Max algorithm, especially in scenarios with a large decision tree.
