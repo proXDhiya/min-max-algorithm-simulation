@@ -34,6 +34,11 @@
     - [5.3 Client Application](#53-client-application)
     - [5.4 Algorithm JS Code](#54-algorithm-js-code)
     - [5.5 Algorithm Implementation](#55-algorithm-implementation)
+6. **Application Demo**
+    - [6.1 API](#61-api)
+    - [6.2 Client Application](#62-client-application)
+7. **Conclusion**
+8. **References**
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -242,3 +247,15 @@ function minimax(node, depth, maximizingPlayer) {
 <img src="https://raw.githubusercontent.com/proXDhiya/min-max-algorithm-simulation/98ccabccbeb7b61fbe80bf03d44c47ad978b5a02/images/image4.png" style="width: 70%; margin-left: 15%; margin-top: 20px;"/>
 
 <p style="text-align: center"> Figure-4: Client application</p>
+
+## 7. Conclusion
+The Min-Max algorithm is a decision-making tool that helps players make optimal decisions in turn-based games with perfect information. The algorithm explores the decision space represented by the game tree, assigning values to nodes based on an objective function. The algorithm's recursive nature allows it to consider all possible moves and their outcomes, ultimately leading to optimal decision-making in turn-based games with perfect information.
+
+## 8. References
+- [Minimax Algorithm in Game Theory | Set 1 (Introduction)](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/)
+- [Minimax Algorithm in Game Theory | Set 2 (Introduction to Evaluation Function)](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-2-evaluation-function/)
+- [Minimax Algorithm in Game Theory | Set 3 (Tic-Tac-Toe AI – Finding optimal move)](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/)
+- [Minimax Algorithm in Game Theory | Set 4 (Alpha-Beta Pruning)](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-4-alpha-beta-pruning/)
+- [Minimax Algorithm in Game Theory | Set 5 (Zobrist Hashing)](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-5-zobrist-hashing/)
+- [Minimax Algorithm in Game Theory | Set 6 (Evaluation Function)](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-6-evaluation-function/)
+- [Minimax Algorithm in Game Theory | Set 7 (Evaluation Function for Tic-Tac-Toe)](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-7-evaluation-function-for-tic-tac-toe/)
